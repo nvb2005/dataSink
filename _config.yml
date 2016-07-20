@@ -6,14 +6,14 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: DataViz
+title: DataSink
 # email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Learn by sharing the knowledge
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: 
-github_username:  datavizweb
+github_username:  nvb2005
 
 # Build settings
 markdown: kramdown
