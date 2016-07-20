@@ -1,0 +1,137 @@
+---
+layout: post
+title: Python Pandas for beginners
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta: {}
+author:
+  login: sangraha
+  email: rrbilgi@gmail.com
+  display_name: sangraha
+  first_name: ''
+  last_name: ''
+---
+<p>This post is for the people who want to learn quickly Pythons Pandas module. I will use simple example to know the use of Pandas.</p>
+<p>We will begin with reading a simple dataset which I created. It only has two fields height and weight.</p>
+<p>[sourcecode language="bash"]</p>
+<p>$ cat simple.csv<br />
+Height,Weight<br />
+178,65<br />
+165,60<br />
+180,75<br />
+173,61<br />
+178,60</p>
+<p>[/sourcecode]</p>
+<p>Lets start by asking questions related to this data.</p>
+<p>How to read this CSV format related data into Pandas? What are the format Pandas can automatically read ?</p>
+<p>[sourcecode language="python"]<br />
+import pandas as pd</p>
+<p>data = pd.read_csv(&quot;simple.csv&quot;)<br />
+[/sourcecode]</p>
+<p>Here we read the CSV into python using panda. Panda can read the CSV without byitself without needing to use the csv module. To know the other formats supported by pandas,<br />
+type pd.read_ and press tab which will show all the formats pandas can read.</p>
+<p>[sourcecode language="python"]<br />
+In [2]: pd.read_<br />
+pd.read_clipboard pd.read_excel pd.read_gbq pd.read_html pd.read_msgpack pd.read_sql pd.read_table<br />
+pd.read_csv pd.read_fwf pd.read_hdf pd.read_json pd.read_pickle pd.read_stata<br />
+[/sourcecode]</p>
+<p>As many of the data available on the web are JSON format, lets try to read the JSON format data.</p>
+<p>[sourcecode language="json"]<br />
+{<br />
+&amp;amp;nbsp; &amp;amp;nbsp; &quot;Height&quot;:{&quot;0&quot;:178,&quot;1&quot;:165,&quot;2&quot;:180,&quot;3&quot;:173,&quot;4&quot;:178},<br />
+&amp;amp;nbsp; &amp;amp;nbsp; &quot;Weight&quot;:{&quot;0&quot;:65,&quot;1&quot;:60,&quot;2&quot;:75,&quot;3&quot;:61,&quot;4&quot;:60}<br />
+}<br />
+[/sourcecode]</p>
+<p>Now to read the JSON, we can use "read_json" function.</p>
+<p>[sourcecode language="python"]<br />
+import pandas as pd</p>
+<p>data = pd.read_json(&quot;simple.json&quot;)<br />
+[/sourcecode]</p>
+<p>I created the JSON format data using "json" function.</p>
+<p>[sourcecode language="python"]</p>
+<p>data = pd.read_csv(&quot;simple.csv&quot;)</p>
+<p>## convert to the JSON format but not write to the file, write to a string and write</p>
+<p>pandas.json.dumps(data) &amp;amp;nbsp; &amp;amp;nbsp;&amp;amp;nbsp;</p>
+<p>[/sourcecode]</p>
+<p>Now, we have read the data into pandas lets start understanding and manipulating the data in pandas.</p>
+<p><!--more--></p>
+<h3>Manipulating the data</h3>
+<p>Lets know manipulate the data which is being read. The question we now have is how the data (CSV) which is read in pandas lookslike</p>
+<p>[sourcecode language="python"]</p>
+<p>data</p>
+<p>[/sourcecode]</p>
+<table class="dataframe" border="1">
+<thead>
+<tr>
+<th></th>
+<th>Height</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>178</td>
+<td>65</td>
+</tr>
+<tr>
+<th>1</th>
+<td>165</td>
+<td>60</td>
+</tr>
+<tr>
+<th>2</th>
+<td>180</td>
+<td>75</td>
+</tr>
+<tr>
+<th>3</th>
+<td>173</td>
+<td>61</td>
+</tr>
+<tr>
+<th>4</th>
+<td>178</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
+<p>5 rows × 2 columns</p>
+<p>&nbsp;</p>
+<p>[sourcecode language="python"]<br />
+data.columns<br />
+[/sourcecode]</p>
+<p>Index([u'Height', u'Weight'], dtype='object')</p>
+<p>"colums" create a Index object. The object has two fields which "Height" and "Weight". They are the features of the data. Also printing "data" will show all fields. We can see that it has 5 rows each correspond to one observation (in this case one person). For example Person 1 (1st row) has height of 178 c.m and Weight of 65 kg. Now lets start manipulating the data which we have read into pandas.</p>
+<p>When we read the CSV into pandas, for each of the fields (features/columns) pandas create a field. In this example it creates fields "Height" and "Weight" which can be accessed as data.Height and data.Weight which is<br />
+pandas series object.</p>
+<p>Now lets get only, Height features for all the observations and also for Weight. It can be done like below.</p>
+<p>[sourcecode language="python"] data.Weight [/sourcecode]</p>
+<pre>0    65
+1    60
+2    75
+3    61
+4    60
+Name: Weight, dtype: int64</pre>
+<p>[sourcecode language="python"] data.Height [/sourcecode]</p>
+<pre>0    178
+1    165
+2    180
+3    173
+4    178
+Name: Height, dtype: int64</pre>
+<p>[sourcecode language="python"]<br />
+type(data.Height) &amp;amp;nbsp; ## each of the feature are stored as pandas series object<br />
+[/sourcecode]</p>
+<p>pandas.core.series.Series</p>
+<pre>We can also access each element using [] operator like it is done for python list and dict.
+
+[sourcecode language="python"]
+
+[/sourcecode]
+
+&nbsp;</pre>
