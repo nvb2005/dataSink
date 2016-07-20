@@ -10,6 +10,83 @@ categories: Reading List
 
 * [Small foot Key word spotter](https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjRoejtsILOAhWLt48KHX4bAUUQFgghMAA&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6854370&usg=AFQjCNF2Q2w6y7X4rtMVcuKNrQ61Y9NQjQ)
 
+> **Abstract**
+Our application requires a keyword spotting system with a small memory footprint, low computational cost, and high precision. To meet these requirements, we propose a simple approach based on deep neural networks. A deep neural network is trained to directly predict the keyword(s) or subword units of the keyword(s) followed by a posterior handling method producing a final confidence score. Keyword recognition results achieve 45% relative improvement with respect to a competitive Hidden Markov Model-based system, while performance in the presence of babble noise shows 39% relative improvement.
+
+
+* [CNN key word spotter](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43969.pdf)
+
+> **Abstract: **
+We explore using Convolutional Neural Networks (CNNs) for
+a small-footprint keyword spotting (KWS) task. CNNs are attractive
+for KWS since they have been shown to outperform
+DNNs with far fewer parameters. We consider two different
+applications in our work, one where we limit the number of
+multiplications of the KWS system, and another where we limit
+the number of parameters. We present new CNN architectures
+to address the constraints of each applications. We find that the
+CNN architectures offer between a 27-44% relative improvement
+in false reject rate compared to a DNN, while fitting into
+the constraints of each application
+
+* [Online Keyword Spotting with a Character-Level Recurrent Neural Network](https://arxiv.org/pdf/1512.08903.pdf)
+
+> **Abstract**
+In this paper, we propose a context-aware keyword spotting model employing a character-level
+recurrent neural network (RNN) for spoken term detection in continuous speech. The RNN is end-toend
+trained with connectionist temporal classification (CTC) to generate the probabilities of character
+and word-boundary labels. There is no need for the phonetic transcription, senone modeling, or system
+dictionary in training and testing. Also, keywords can easily be added and modified by editing the text
+based keyword list without retraining the RNN. Moreover, the unidirectional RNN processes an infinitely
+long input audio streams without pre-segmentation and keywords are detected with low-latency before
+the utterance is finished. Experimental results show that the proposed keyword spotter significantly
+outperforms the deep neural network (DNN) and hidden Markov model (HMM) based keyword-filler
+model even with less computations
+
+* [Queury-By-Example Keyword Spotter](http://www.clsp.jhu.edu/wp-content/uploads/sites/75/2015/11/icassp2015_myhotword.pdf)
+
+> **Abstract**
+We present a novel approach to query-by-example keyword spotting
+(KWS) using a long short-term memory (LSTM) recurrent neural
+network-based feature extractor. In our approach, we represent each
+keyword using a fixed-length feature vector obtained by running the
+keyword audio through a word-based LSTM acoustic model. We
+use the activations prior to the softmax layer of the LSTM as our
+keyword-vector. At runtime, we detect the keyword by extracting
+the same feature vector from a sliding window and computing a simple
+similarity score between this test vector and the keyword vector.
+With clean speech, we achieve 86% relative false rejection rate reduction
+at 0.5% false alarm rate when compared to a competitive
+phoneme posteriorgram with dynamic time warping KWS system,
+while the reduction in the presence of babble noise is 67%. Our system
+has a small memory footprint, low computational cost, and high
+precision, making it suitable for on-device applications
+
+* [Neural Attention Model](https://arxiv.org/pdf/1604.00077.pdf)
+
+> **Abstract**
+Recurrent neural network architectures combining with attention
+mechanism, or neural attention model, have shown promising
+performance recently for the tasks including speech recognition,
+image caption generation, visual question answering and
+machine translation. In this paper, neural attention model is applied
+on two sequence labeling tasks, dialogue act detection and
+key term extraction. In the sequence labeling tasks, the model
+input is a sequence, and the output is the label of the input sequence.
+The major difficulty of sequence labeling is that when
+the input sequence is long, it can include many noisy or irrelevant
+part. If the information in the whole sequence is treated
+equally, the noisy or irrelevant part may degrade the classifi-
+cation performance. The attention mechanism is helpful for
+sequence classification task because it is capable of highlighting
+important part among the entire sequence for the classification
+task. The experimental results show that with the attention
+mechanism, discernible improvements were achieved in the sequence
+labeling task considered here. The roles of the attention
+mechanism in the tasks are further analyzed and visualized in
+this paper
+
+
 # Neural Network Adaptation
 
 * [Steve Renals ASRU 2015 Talk](http://homepages.inf.ed.ac.uk/srenals/asru2015-srenals.pdf)
