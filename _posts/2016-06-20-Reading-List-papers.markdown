@@ -5,7 +5,9 @@ date:   2016-06-20
 categories: Reading List
 ---
 # Key Word spotting LSTM
+
 > 2014-present
+
 * [Small foot Key word spotter](https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjRoejtsILOAhWLt48KHX4bAUUQFgghMAA&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6854370&usg=AFQjCNF2Q2w6y7X4rtMVcuKNrQ61Y9NQjQ)
 
 # Neural Network Adaptation
