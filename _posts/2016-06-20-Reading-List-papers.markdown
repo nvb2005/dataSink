@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reading List"
+title:  "Paper Stack"
 date:   2016-06-20
 categories: Reading List
 ---
