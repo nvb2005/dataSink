@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learning Resources
+title: Material
 date:   2016-05-29
 categories: resources
 ---
